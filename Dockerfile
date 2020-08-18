@@ -62,6 +62,8 @@ RUN (mkdir /home/docker/.ssh && \
 USER docker
 RUN (echo "export PATH=$PATH:/home/docker/go/bin:/home/docker/node_modules/jshint/bin" >> ~/.profile && \
     echo "export GOPATH=/home/docker" >> ~/.profile)
+RUN (echo "export PATH=$PATH:/home/docker/go/bin:/home/docker/node_modules/jshint/bin" >> ~/.bashrc && \
+    echo "export GOPATH=/home/docker" >> ~/.bashrc)
 
 USER root
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
