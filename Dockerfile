@@ -45,7 +45,7 @@ RUN (wget https://github.com/zyedidia/micro/releases/download/v2.0.6/micro-2.0.6
     mv micro-2.0.6/micro /usr/bin/ && \
     rm micro-2.0.6/ -rf)
 USER docker
-RUN (mkdir /home/docker/.config && mkdir /home/docker/.config/micro && \
+RUN (mkdir /home/docker/.config/micro && \
     git clone https://github.com/nigol/micro-cfg.git && \
     mv /home/docker/micro-cfg/settings.json /home/docker/.config/micro &&\
     rm /home/docker/micro-cfg -rf)
