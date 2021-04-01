@@ -35,7 +35,8 @@ RUN (npm i jshint)
 
 # Git configuration
 RUN (git config --global user.email "nigol@nigol.cz" && \
-  git config --global user.name "Martin Polak")
+  git config --global user.name "Martin Polak" && \
+  git config --global core.filemode false)
   
 # micro configuration
 USER root
